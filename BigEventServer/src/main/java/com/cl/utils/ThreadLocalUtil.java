@@ -21,7 +21,6 @@ public class ThreadLocalUtil {
         THREAD_LOCAL.set(value);
     }
 
-
     //清除ThreadLocal 防止内存泄漏
     public static void remove(){
         THREAD_LOCAL.remove();

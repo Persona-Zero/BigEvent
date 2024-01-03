@@ -21,15 +21,15 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/list")
-    public Result list(@RequestHeader(name = "Authorization") String token, HttpServletResponse response){
+    public Result list(/*@RequestHeader(name = "Authorization") String token, HttpServletResponse response*/){
         //验证token
-        try {
-            Map<String, Object> claims = JwtUtil.parseToken(token);
-            return Result.success("查询所有文章数据");
-        }catch (Exception e){
-            response.setStatus(401);
-            return Result.error("未登录或登录信息过期！");
-        }
-
+        //try {
+        //    Map<String, Object> claims = JwtUtil.parseToken(token);
+        //    return Result.success("查询所有文章数据");
+        //}catch (Exception e){
+        //    response.setStatus(401);
+        //    return Result.error("未登录或登录信息过期！");
+        //}
+        return Result.success("查询所有文章数据");
     }
 }
